@@ -27,29 +27,15 @@
     <div class="main-wrap">
       <!-- offcanvas-start -->
       <div class="offcanvas-menu">
-        <ul class="offmenu" id="menuParent">
-          <a href="#" class="offcanvas-close"><i class="fa fa-times"></i></a>
-          <li class="active"><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li class="dropdown">
-            <a href="#" data-bs-toggle="collapse" data-bs-target="#drop-menu1"
-              >OUR HORSES</a
-            >
-            <div
-              class="dropdown-menu-custom collapse"
-              id="drop-menu1"
-              data-bs-parent="#menuParent"
-            >
-              <ul>
-                <li><a href="#">YEARLINGS</a></li>
-                <li><a href="#">2 YEAR OLDS</a></li>
-                <li><a href="#">3 YEAR OLD PLUS</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="#">LATEST NEWS</a></li>
-          <li><a href="#">CONTACT & FIND US</a></li>
-        </ul>
+        <div class="offmenu" id="menuParent">
+          <a href="#" class="offcanvas-close"><i class="fal fa-times"></i></a>
+          <ul class="mobile-menu">
+            <li><a href="#">Swap</a></li>
+            <li><a href="#">Token</a></li>
+            <li><a href="#">NFTs</a></li>
+            <li><a href="#">Pools</a></li>
+          </ul>
+        </div>
       </div>
       <div class="offcanvas-overlay"></div>
       <!-- offcanvas-start-end -->
@@ -63,7 +49,10 @@
                 <a href="index.html" class="header__logo">
                   <img src="images/logo.svg" alt="" />
                 </a>
-                <div class="main-menu">
+                <a href="#" class="offcanvas-open d-xl-none">
+                  <i class="fal fa-bars"></i>
+                </a>
+                <div class="main-menu d-xl-block d-none">
                   <ul>
                     <li><a href="#">Swap</a></li>
                     <li><a href="#">Token</a></li>
@@ -75,7 +64,7 @@
               </div>
 
               <div class="header__middle">
-                <div class="header__search">
+                <div class="header__search d-lg-block d-none">
                   <input
                     type="text"
                     class="header__search__input"
@@ -301,13 +290,272 @@
                   </div>
                 </div>
 
-                <a href="#" class="header__connect"> Connect </a>
+                <a href="#" class="header__connect" id="headerConnect">
+                  Connect
+                </a>
               </div>
             </div>
           </div>
         </div>
       </header>
       <!--End header-section -->
+
+      <!--  -->
+      <div class="d-lg-none" style="z-index: 500; position: relative">
+        <div class="container-fluid">
+          <div>
+            <div class="header__search w-100">
+              <input
+                type="text"
+                class="header__search__input"
+                placeholder="Search tokens and NFT collections"
+              />
+              <div class="header__search__icon">
+                <i class="far fa-search"></i>
+              </div>
+              <a href="#" class="header__search__right__i">/</a>
+              <div class="header__search__main__bg"></div>
+
+              <div class="header__search__dropdown">
+                <div class="header__search__dropdown__in">
+                  <!-- group -->
+                  <div class="header__search__result__group">
+                    <div class="header__search__result__group__title">
+                      <h4 class="mb-0">
+                        <img
+                          src="images/trade-up.png"
+                          alt=""
+                          class="trade-up"
+                        />
+                        Popular tokens
+                      </h4>
+                    </div>
+                    <div class="header__search__results">
+                      <!-- single -->
+                      <div class="header__search__result__single">
+                        <div class="header__search__result__single__left">
+                          <div
+                            class="header__search__result__single__left__image"
+                          >
+                            <img src="images/ether.png" alt="" class="img" />
+                          </div>
+                          <div class="header__search__result__single__left__tc">
+                            <h4>Eher</h4>
+                            <h5>ETH</h5>
+                          </div>
+                        </div>
+                        <div class="header__search__result__single__right">
+                          <h4>$1,810.81</h4>
+                          <h5 class="green">
+                            <img
+                              src="images/arrow-top-right-green.png"
+                              alt=""
+                            />
+                            1.92%
+                          </h5>
+                        </div>
+                      </div>
+                      <!-- single-end -->
+                      <!-- single -->
+                      <div class="header__search__result__single">
+                        <div class="header__search__result__single__left">
+                          <div
+                            class="header__search__result__single__left__image"
+                          >
+                            <img src="images/ether.png" alt="" class="img" />
+                          </div>
+                          <div class="header__search__result__single__left__tc">
+                            <h4>USD Coin</h4>
+                            <h5>USDC</h5>
+                          </div>
+                        </div>
+                        <div class="header__search__result__single__right">
+                          <h4>$1,810.81</h4>
+                          <h5 class="green">
+                            <img
+                              src="images/arrow-top-right-green.png"
+                              alt=""
+                            />
+                            1.92%
+                          </h5>
+                        </div>
+                      </div>
+                      <!-- single-end -->
+                    </div>
+                  </div>
+                  <!-- group-end -->
+                  <!-- group -->
+                  <div class="header__search__result__group">
+                    <div class="header__search__result__group__title">
+                      <h4 class="mb-0">
+                        <img
+                          src="images/trade-up.png"
+                          alt=""
+                          class="trade-up"
+                        />
+                        Popular NFT collections
+                      </h4>
+                    </div>
+                    <div class="header__search__results">
+                      <!-- single -->
+                      <div class="header__search__result__single">
+                        <div class="header__search__result__single__left">
+                          <div
+                            class="header__search__result__single__left__image"
+                          >
+                            <img
+                              src="images/an-person.png"
+                              alt=""
+                              class="img"
+                            />
+                          </div>
+                          <div class="header__search__result__single__left__tc">
+                            <h4>Wrapped Cryptopunks</h4>
+                            <h5>ETH</h5>
+                          </div>
+                        </div>
+                        <div class="header__search__result__single__right">
+                          <h4>63.50 ETH</h4>
+                          <h5 class="">Floor</h5>
+                        </div>
+                      </div>
+                      <!-- single-end -->
+                      <!-- single -->
+                      <div class="header__search__result__single">
+                        <div class="header__search__result__single__left">
+                          <div
+                            class="header__search__result__single__left__image"
+                          >
+                            <img
+                              src="images/an-person.png"
+                              alt=""
+                              class="img"
+                            />
+                          </div>
+                          <div class="header__search__result__single__left__tc">
+                            <h4>Nakamigos</h4>
+                            <h5>USDC</h5>
+                          </div>
+                        </div>
+                        <div class="header__search__result__single__right">
+                          <h4>0.155 ETH</h4>
+                          <h5 class="">Floor</h5>
+                        </div>
+                      </div>
+                      <!-- single-end -->
+                    </div>
+                  </div>
+                  <!-- group-end -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sidebar -->
+      <div class="sidebar" id="connect-sidebar">
+        <div class="sidebar__close-column">
+          <a href="#" class="sidebar__close-button" id="connect-sidebar-close">
+            <i class="far fa-chevron-double-right"></i>
+          </a>
+        </div>
+        <div class="sidebar__inner">
+          <div class="sidebar__title">
+            <h4 class="mb-0">Connect a wallet</h4>
+            <a href="#" class="sdb-st-btn" id="settingSidebarOpen">
+              <img src="images/cog.png" alt="" />
+            </a>
+          </div>
+          <div class="sidebar__main">
+            <div class="sidebar__wallets">
+              <div class="sidebar__wallet__single">
+                <div class="icon">
+                  <img src="images/meta-mask.png" alt="" />
+                </div>
+                <div class="tc">Metamask</div>
+              </div>
+              <div class="sidebar__wallet__single">
+                <div class="icon">
+                  <img src="images/wallet-connect.png" alt="" />
+                </div>
+                <div class="tc">Wallet connect</div>
+              </div>
+              <div class="sidebar__wallet__single">
+                <div class="icon">
+                  <img src="images/coinbase.png" alt="" />
+                </div>
+                <div class="tc">Coinbase wallet</div>
+              </div>
+            </div>
+            <p class="sdc-p-aer mt-3">
+              By connecting a wallet, you agree to Uniswap Labs'
+              <a href="#" class="fw-600">Terms of Service</a> and consent to its
+              <a href="#" class="fw-600"> Privacy Policy</a>. (Last Updated
+              11.17.22)
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- sidebar-end -->
+
+      <!-- sidebar -->
+      <div class="sidebar" id="setting-sidebar">
+        <div class="sidebar__inner">
+          <div class="sidebar__title justify-content-center">
+            <a
+              href="#"
+              class="setting-sidebar-close"
+              id="setting-sidebar-close"
+            >
+              <i class="fal fa-arrow-left"></i>
+            </a>
+            <h4 class="mb-0 text-center">Settings</h4>
+          </div>
+          <div class="sidebar__main pt-3">
+            <h4>Preferences</h4>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="mb-0 fw-500">Theme</p>
+              <div class="theme__button">
+                <a href="#" class="option active">Auto</a>
+                <a href="#" class="option"
+                  ><img src="images/light.png" alt=""
+                /></a>
+                <a href="#" class="option"
+                  ><img src="images/dark.png" alt=""
+                /></a>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-between align-items-center mb-4 pb-3"
+            >
+              <p class="mb-0 fw-500">Hide small balances</p>
+              <input type="checkbox" class="checkbox-switch" checked />
+            </div>
+
+            <h4>Preferences</h4>
+            <div class="set-lan-selects">
+              <div class="option">
+                <span class="txt">English</span>
+                <i class="fal fa-check right-check"></i>
+              </div>
+              <div class="option">
+                <span class="txt">Afrikaans</span>
+              </div>
+              <div class="option">
+                <span class="txt">Deutsch</span>
+              </div>
+              <div class="option">
+                <span class="txt">suomi</span>
+              </div>
+              <div class="option">
+                <span class="txt">Magyar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sidebar-end -->
 
       <!-- main -->
       <main>
@@ -318,9 +566,77 @@
               <div class="m-display">
                 <div class="m-display__title">
                   <h4 class="mb-0">Swap</h4>
-                  <a href="#" class="set-a">
-                    <img src="images/cog.png" alt="" />
-                  </a>
+                  <div class="set-a dropdown">
+                    <a href="#" class="" data-bs-toggle="dropdown">
+                      <img src="images/cog.png" alt="" />
+                    </a>
+                    <div class="dropdown-menu set-a-dropdown dropdown-menu-end">
+                      <h4 class="fw-500">Settings</h4>
+                      <h4 class="mb-3">
+                        Slippage tolerance
+                        <a href="#" class="ques"
+                          ><img src="images/ques.png" alt=""
+                        /></a>
+                      </h4>
+                      <div class="row gx-2 mb-3">
+                        <div class="col-3">
+                          <a href="#" class="x-btn w-100">Auto</a>
+                        </div>
+                        <div class="col-9">
+                          <input
+                            type="text"
+                            class="x-input text-right"
+                            value="0.10%"
+                          />
+                        </div>
+                      </div>
+                      <h4 class="mb-2">
+                        Transaction deadline
+                        <a href="#" class="ques"
+                          ><img src="images/ques.png" alt=""
+                        /></a>
+                      </h4>
+                      <div class="row align-items-center gx-2 mb-3">
+                        <div class="col-4">
+                          <input
+                            type="text"
+                            class="x-input text-right"
+                            value="30"
+                          />
+                        </div>
+                        <div class="col-8">
+                          <h4 class="mb-0">minutes</h4>
+                        </div>
+                      </div>
+                      <h4 class="fw-500 mb-3">Interface Settings</h4>
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-1 pb-2"
+                      >
+                        <h4 class="mb-0">
+                          Auto Router API
+                          <a href="#" class="ques"
+                            ><img src="images/ques.png" alt=""
+                          /></a>
+                        </h4>
+                        <input
+                          type="checkbox"
+                          class="checkbox-switch"
+                          checked
+                        />
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <h4 class="mb-0">
+                          Expert Mode
+                          <a href="#" class="ques"
+                            ><img src="images/ques.png" alt=""
+                          /></a>
+                        </h4>
+                        <input type="checkbox" class="checkbox-switch" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="m-display__main">
                   <div class="m-display__part z-2">
@@ -338,7 +654,12 @@
                   </div>
                   <div class="m-display__part">
                     <h3>0</h3>
-                    <a href="#" class="i-c-trg i-c-trg--theme-1">
+                    <a
+                      href="#"
+                      class="i-c-trg i-c-trg--theme-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#token-modal"
+                    >
                       <span class="txt">Select token</span>
                       <i class="far fa-chevron-down chevron"></i>
                     </a>
@@ -356,6 +677,169 @@
       <!-- main end -->
     </div>
     <!-- main-wrap -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="token-modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered token-modal-dialog">
+        <div class="modal-content token-modal-content">
+          <div class="token-modal__top">
+            <div class="token-modal__top__title">
+              <h4 class="mb-0">Select a token</h4>
+              <a href="" class="close" data-bs-dismiss="modal"
+                ><i class="far fa-times"></i
+              ></a>
+            </div>
+            <div class="tm-search">
+              <input
+                type="text"
+                class="input"
+                placeholder="Search name or paste address"
+              />
+              <i class="fal fa-search search-icon"></i>
+            </div>
+            <div class="tm__cheaps">
+              <a href="#" class="tm__cheap">
+                <div class="icon">
+                  <img src="images/ether.png" alt="" />
+                </div>
+                <div class="tc">ETH</div>
+              </a>
+              <a href="#" class="tm__cheap">
+                <div class="icon">
+                  <img src="images/dai.png" alt="" />
+                </div>
+                <div class="tc">DAI</div>
+              </a>
+              <a href="#" class="tm__cheap">
+                <div class="icon">
+                  <img src="images/usdc.png" alt="" />
+                </div>
+                <div class="tc">USDC</div>
+              </a>
+              <a href="#" class="tm__cheap">
+                <div class="icon">
+                  <img src="images/usdt.png" alt="" />
+                </div>
+                <div class="tc">USDT</div>
+              </a>
+              <a href="#" class="tm__cheap">
+                <div class="icon">
+                  <img src="images/wbtc.png" alt="" />
+                </div>
+                <div class="tc">WBTC</div>
+              </a>
+              <a href="#" class="tm__cheap">
+                <div class="icon">
+                  <img src="images/weth.png" alt="" />
+                </div>
+                <div class="tc">WETH</div>
+              </a>
+            </div>
+          </div>
+          <div class="token-modal__bottom">
+            <!-- single -->
+            <div class="header__search__result__single disabled">
+              <div class="header__search__result__single__left">
+                <div class="header__search__result__single__left__image">
+                  <img src="images/ether.png" alt="" class="img" />
+                </div>
+                <div class="header__search__result__single__left__tc">
+                  <h4>Eher</h4>
+                  <h5>ETH</h5>
+                </div>
+              </div>
+              <div class="header__search__result__single__right">
+                <div class="right-arr"><i class="fal fa-check"></i></div>
+              </div>
+            </div>
+            <!-- single-end -->
+            <!-- single -->
+            <div class="header__search__result__single disabled">
+              <div class="header__search__result__single__left">
+                <div class="header__search__result__single__left__image">
+                  <img src="images/ether.png" alt="" class="img" />
+                </div>
+                <div class="header__search__result__single__left__tc">
+                  <h4>Eher</h4>
+                  <h5>ETH</h5>
+                </div>
+              </div>
+            </div>
+            <!-- single-end -->
+            <!-- single -->
+            <div class="header__search__result__single">
+              <div class="header__search__result__single__left">
+                <div class="header__search__result__single__left__image">
+                  <img src="images/ether.png" alt="" class="img" />
+                </div>
+                <div class="header__search__result__single__left__tc">
+                  <h4>Eher</h4>
+                  <h5>ETH</h5>
+                </div>
+              </div>
+            </div>
+            <!-- single-end -->
+            <!-- single -->
+            <div class="header__search__result__single">
+              <div class="header__search__result__single__left">
+                <div class="header__search__result__single__left__image">
+                  <img src="images/ether.png" alt="" class="img" />
+                </div>
+                <div class="header__search__result__single__left__tc">
+                  <h4>Eher</h4>
+                  <h5>ETH</h5>
+                </div>
+              </div>
+            </div>
+            <!-- single-end -->
+            <!-- single -->
+            <div class="header__search__result__single">
+              <div class="header__search__result__single__left">
+                <div class="header__search__result__single__left__image">
+                  <img src="images/ether.png" alt="" class="img" />
+                </div>
+                <div class="header__search__result__single__left__tc">
+                  <h4>Eher</h4>
+                  <h5>ETH</h5>
+                </div>
+              </div>
+            </div>
+            <!-- single-end -->
+            <!-- single -->
+            <div class="header__search__result__single">
+              <div class="header__search__result__single__left">
+                <div class="header__search__result__single__left__image">
+                  <img src="images/ether.png" alt="" class="img" />
+                </div>
+                <div class="header__search__result__single__left__tc">
+                  <h4>Eher</h4>
+                  <h5>ETH</h5>
+                </div>
+              </div>
+            </div>
+            <!-- single-end -->
+            <!-- single -->
+            <div class="header__search__result__single">
+              <div class="header__search__result__single__left">
+                <div class="header__search__result__single__left__image">
+                  <img src="images/ether.png" alt="" class="img" />
+                </div>
+                <div class="header__search__result__single__left__tc">
+                  <h4>Eher</h4>
+                  <h5>ETH</h5>
+                </div>
+              </div>
+            </div>
+            <!-- single-end -->
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- js -->
     <script src="js/jquery-3.6.0.min.js"></script>

@@ -20,6 +20,53 @@
 /* --buttons--end */
 
 
+/* checkbox-switch */
+.checkbox-switch {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: 34px;
+    width: 64px;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox-switch::before {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    border: 1px solid #D2D9EE;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.checkbox-switch:checked::before {
+    background: #DCF5FF;
+    border-color: transparent;
+}
+.checkbox-switch::after {
+    --offset: 5px;
+    height: 24px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: var(--offset);
+    transform: translate(0 , -50%);
+    content: '';
+    background: #98A1C0;
+    display: block;
+    transition: 0.3s;
+}
+.checkbox-switch:checked::after {
+    background: var(--theme__color1);
+    transform: translate(-100% , -50%);
+    left: calc(100% - var(--offset));
+}
+
+
 /* small-tools */
 .underline {
     text-decoration: underline !important;

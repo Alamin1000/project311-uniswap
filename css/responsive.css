@@ -1,4 +1,14 @@
-
+@media (max-width: 1499px) {
+    .header__search {
+        width: 464px;
+    }
+    .header__left {
+        gap: 0px;
+    }
+    .main-menu {
+        margin-right: -204px;
+    }
+}
 
 @media (max-width: 1399px) {
  
@@ -6,12 +16,19 @@
 
 
 @media (max-width: 1199px) {
- 
+    .header__left {
+        gap: 6px;
+    }
+    .header__middle {
+        margin-left: 88px;
+    }
 }
 
 
 @media (max-width: 991px) {
- 
+    .header__middle {
+        margin-left: 0px;
+    }
 }
 
 

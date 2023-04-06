@@ -23,6 +23,22 @@
       $(".offcanvas-overlay").removeClass("active");
     }
   });
+
+  // sidebar
+  $("#headerConnect").click(function () {
+    $("#connect-sidebar").addClass("active");
+  });
+  $("#connect-sidebar-close").click(function () {
+    $("#connect-sidebar").removeClass("active");
+  });
+  $("#settingSidebarOpen").click(function () {
+    $("#setting-sidebar").addClass("active");
+    $("#connect-sidebar").removeClass("active");
+  });
+  $("#setting-sidebar-close").click(function () {
+    $("#setting-sidebar").removeClass("active");
+    $("#connect-sidebar").addClass("active");
+  });
 })(jQuery);
 
 $(document).ready(function () {
