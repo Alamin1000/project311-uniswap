@@ -13,9 +13,15 @@
     text-align: center;
     transition: 0.3s;
 }
+.dark-page .default-button {
+    background: rgba(34, 117, 175, 0.3);
+}
 .default-button:hover {
     background: #bbecff;
     color: var(--theme__color1);
+}
+.dark-page .default-button:hover {
+    background: rgba(34, 117, 175, 0.5);
 }
 /* --buttons--end */
 
@@ -42,9 +48,15 @@
     border-radius: 30px;
     transition: 0.3s;
 }
+.dark-page .checkbox-switch::before {
+    border-color: #3E3E3E;
+}
 .checkbox-switch:checked::before {
     background: #DCF5FF;
     border-color: transparent;
+}
+.dark-page .checkbox-switch:checked::before {
+    background: #143248;
 }
 .checkbox-switch::after {
     --offset: 5px;

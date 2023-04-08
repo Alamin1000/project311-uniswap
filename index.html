@@ -19,7 +19,7 @@
     <!--End ALL STYLESHEET -->
   </head>
 
-  <body>
+  <body class="dark-page">
     <!-- preloader -->
     <div id="preloader"></div>
     <!-- preloader-end -->
@@ -47,7 +47,8 @@
             <div class="header-section__inner">
               <div class="header__left">
                 <a href="index.html" class="header__logo">
-                  <img src="images/logo.svg" alt="" />
+                  <img class="dark-hide" src="images/logo.svg" alt="" />
+                  <img class="light-hide" src="images/logo-light.svg" alt="" />
                 </a>
                 <a href="#" class="offcanvas-open d-xl-none">
                   <i class="fal fa-bars"></i>
@@ -237,7 +238,7 @@
                   </a>
                   <div class="dropdown-menu crip-down-menu dropdown-menu-end">
                     <div class="crip-menu">
-                      <div class="crip-menu__item">
+                      <a href="#" class="crip-menu__item">
                         <div class="crip-menu__item__left">
                           <div class="icn">
                             <img src="images/ether.png" alt="" />
@@ -245,47 +246,47 @@
                           <h4 class="mb-0">Ethereum</h4>
                         </div>
                         <i class="fal fa-check right-mark"></i>
-                      </div>
-                      <div class="crip-menu__item">
+                      </a>
+                      <a href="#" class="crip-menu__item">
                         <div class="crip-menu__item__left">
                           <div class="icn">
                             <img src="images/polygon.png" alt="" />
                           </div>
                           <h4 class="mb-0">Polygon</h4>
                         </div>
-                      </div>
-                      <div class="crip-menu__item">
+                      </a>
+                      <a href="#" class="crip-menu__item">
                         <div class="crip-menu__item__left">
                           <div class="icn">
                             <img src="images/optimism.png" alt="" />
                           </div>
                           <h4 class="mb-0">Optimism</h4>
                         </div>
-                      </div>
-                      <div class="crip-menu__item">
+                      </a>
+                      <a href="#" class="crip-menu__item">
                         <div class="crip-menu__item__left">
                           <div class="icn">
                             <img src="images/arbiturm.png" alt="" />
                           </div>
                           <h4 class="mb-0">Arbitrum</h4>
                         </div>
-                      </div>
-                      <div class="crip-menu__item">
+                      </a>
+                      <a href="#" class="crip-menu__item">
                         <div class="crip-menu__item__left">
                           <div class="icn">
                             <img src="images/celo.png" alt="" />
                           </div>
                           <h4 class="mb-0">Celo</h4>
                         </div>
-                      </div>
-                      <div class="crip-menu__item">
+                      </a>
+                      <a href="#" class="crip-menu__item">
                         <div class="crip-menu__item__left">
                           <div class="icn">
                             <img src="images/bnb-chain.png" alt="" />
                           </div>
                           <h4 class="mb-0">BNB Chain</h4>
                         </div>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -464,7 +465,7 @@
           <div class="sidebar__title">
             <h4 class="mb-0">Connect a wallet</h4>
             <a href="#" class="sdb-st-btn" id="settingSidebarOpen">
-              <img src="images/cog.png" alt="" />
+              <i class="fal fa-cog"></i>
             </a>
           </div>
           <div class="sidebar__main">
@@ -517,11 +518,11 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
               <p class="mb-0 fw-500">Theme</p>
               <div class="theme__button">
-                <a href="#" class="option active">Auto</a>
-                <a href="#" class="option"
+                <a theme-value="auto" href="#" class="option active">Auto</a>
+                <a theme-value="light" href="#" class="option"
                   ><img src="images/light.png" alt=""
                 /></a>
-                <a href="#" class="option"
+                <a theme-value="dark" href="#" class="option"
                   ><img src="images/dark.png" alt=""
                 /></a>
               </div>

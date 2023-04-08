@@ -39,6 +39,36 @@
     $("#setting-sidebar").removeClass("active");
     $("#connect-sidebar").addClass("active");
   });
+
+  //first apply the device theme
+  deviceThemeApply();
+  // theme__button
+  $(".theme__button .option").click(function () {
+    // theme-control
+    $(".theme__button .option").removeClass("active");
+    this.classList.add("active");
+    var thisTrig = this.getAttribute("theme-value");
+    switch (thisTrig) {
+      case "light":
+        $("body").removeClass("dark-page");
+        break;
+      case "dark":
+        $("body").addClass("dark-page");
+        break;
+      case "auto":
+        deviceThemeApply();
+    }
+  });
+  function deviceThemeApply() {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      $("body").addClass("dark-page");
+    } else {
+      $("body").removeClass("dark-page");
+    }
+  }
 })(jQuery);
 
 $(document).ready(function () {
